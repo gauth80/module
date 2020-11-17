@@ -1,3 +1,24 @@
+
+### Notes :
+checker les points avec ctrl+f =1...=9 etc
+
+  > 15/11/2020 padding changer pour form.inscription, p-sm-$ écraser via le poids de selecteur;  
+  controller contrôler pour le form.inscription (plus d'erreur de state).
+  sécuritée des champs form.inscription légère, a revoir (=1).
+  changement de composants accueil / home (initial page).
+  sass text center pour xs
+
+  > 17/11/2020 espace connexion, refactoring inscription
+  session fonctionnelle, soucie de dépendance dans le hook(=2)
+
+*note* : a faire le deconnexion.. étendre les sessions sur les autres composants..
+#### Liens sympa
+-
++ [CanIUse](https://caniuse.com/)  
++ [CssTriggers](https://csstriggers.com/)  
+-
+_________
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

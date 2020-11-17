@@ -1,0 +1,8 @@
+.wrap {
+  margin: 0;
+  background-attachment: fixed; }
+
+.wrap.inscription {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }

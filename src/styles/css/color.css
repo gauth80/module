@@ -1,0 +1,11 @@
+/*
+  @param(color + background-color)
+  hover && active
+  $snow + $red = AAA
+  $snow + $blue = AAA
+*/
+.text-imp {
+  color: #871A1A; }
+
+.text-sec {
+  color: #27478c; }

@@ -1,0 +1,158 @@
+@import '../_config.scss';
+@import 'color.scss';
+
+/*
+  =0 placeholder
+  =1 Navbar
+  =2 indépendants
+  =3 formulaire
+  =4 footer
+*/
+
+
+// =0 placeholder / shadow
+%button {
+  border-radius:4px;
+  cursor:grab;
+  padding:5px;
+  text-transform:uppercase;
+  @include prefix(transition, all .3s,webkit moz o ms);
+  &:hover:not(.shade) {
+    @include prefix(transform, scale(1.05),webkit moz o ms);
+  }
+  &:active {
+    @include prefix(transform, scale(1),webkit moz o ms);
+  }
+}
+
+
+.btn-success {
+  @extend %success;
+  @extend %button;
+}
+.btn-danger {
+  @extend %danger;
+  @extend %button;
+}
+.btn-mono {
+  @extend %monochrome;
+  @extend %button;
+}
+.btn-neon {
+  @extend %monochrome;
+  @extend %button;
+  border-color:$red;
+  &:hover:not(.shade) {
+    box-shadow:0 0 18px -5px $red;
+  }
+}
+%border {
+  //no short hand..
+  border-top-left-radius: 15px 33px;
+  border-top-right-radius: 35px 62px;
+  border-bottom-left-radius: 26px 98px;
+  border-bottom-right-radius: 41px 153px;
+}
+
+%formulaire {
+  font-size:1.5rem;
+  padding:5rem;
+  color:white;
+  background:#111111d6;
+  fieldset {
+    border:none;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+  }
+  input {
+    transition:all 1s;
+    transition-timing-function:ease-in-out;
+    line-height:2rem;
+    text-indent:1rem;
+    letter-spacing:1px;
+    font-size:.9rem;
+    color:inherit;
+    width:100%;
+    border:none;
+    background:transparent;
+  }
+}
+
+%input {
+  &:invalid {
+    border-bottom:2px solid $red;
+  }
+  &:valid {
+    border-bottom:2px solid $green;
+  }
+  &:focus {
+    border-bottom:2px solid $snow;
+  }
+}
+
+/*
+  Components
+  =1 Navbar
+*/
+
+.navbar {
+  background-color:#141414;
+  .box-navbar {
+    margin:0;
+    padding:10px;
+    .list-box {
+      display:inline-block;
+      list-style-type:none;
+      .link-list {
+        color:white;
+        text-decoration: none;
+        letter-spacing:2px;
+      }
+    }
+  }
+}
+
+
+//=2 indépendants
+.infoSub {
+  border-top:2px dotted gray;
+  background:#111111d6;
+  h3 {
+    font-family:Times New Roman, arial;
+    font-weight:400;
+    font-size:1.5rem;
+    color:white;
+  }
+  p {
+    font-family: Tahoma,arial;
+    color:#8f9090;
+    line-height:2rem;
+    text-indent:1rem;
+    letter-spacing:1px;
+    font-size:.9rem;
+  }
+  a {
+    text-decoration:none;
+    color:gray;
+    font-size:inherit;
+    transition:all 1s;
+    &:hover {
+      color:white;
+    }
+  }
+}
+
+//=3 formulaires
+.form.inscription {
+  @extend %formulaire;
+
+  input {
+    @extend %input;
+  }
+}
+
+//=4 footer
+footer {
+  border-top:$snow;
+}

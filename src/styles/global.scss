@@ -1,0 +1,30 @@
+@import '_config.scss';
+
+@import './scss/grid.scss';
+@import './scss/color.scss';
+
+@import './scss/components.scss';
+@import './scss/wrap.scss';
+
+
+
+.shade {
+  transition:all .3s;
+  opacity:.4;
+}
+
+
+
+%help {
+  //sert de point de repère lors de creation de component
+  padding:20px;
+  margin:10px;
+  border-radius:0 12.5px 0 12.5px;
+  width:200px;
+}
+
+.helper {
+  @extend %help;
+  background-color:$darken;
+  color:invert($darken);
+}
