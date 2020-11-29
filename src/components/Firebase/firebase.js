@@ -1,14 +1,20 @@
 import app from 'firebase/app';
 import 'firebase/auth';
-import key from './key/config.json';
+import 'firebase/firestore';
+//import key from './key/config.json';
 
 //key de l'api :)
-const config = key;
+//const config = key;
+
+
+
+
 
 class Firebase {
   constructor() {
     app.initializeApp(config);
     this.auth = app.auth();
+    this.db = app.firestore();
   }
 
   inscription = (email,password) =>
@@ -18,9 +24,14 @@ class Firebase {
   connexion = (email,password) =>
     this.auth.signInWithEmailAndPassword(email,password);
 
-  deconnexion = () => {
+  deconnexion = () =>
     this.auth.signOut();
-  }
+
+
+  user = uid =>
+    //this.db.doc(`user/${uid}`);
+    this.db.collection("user").doc();
+
 }
 
 export default Firebase;

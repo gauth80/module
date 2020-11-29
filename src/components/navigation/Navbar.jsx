@@ -1,19 +1,23 @@
 import React, {useRef} from 'react';
 import {Link} from 'react-router-dom';
+import Deconnexion from './features/Deconnexion';
 
-const Navbar = () => {
 
+const Navbar = props => {
+
+  //les ref
   const refButton1 = useRef(Navbar);
   const refButton2 = useRef(Navbar);
 
-
+  //hides buttons
   const buttonLeft = () => {
-    refButton2.current.classList.add("shade");
-  }
-  const buttonRight = () => {
-    refButton1.current.classList.add("shade");
-  }
+    refButton2.current.classList.add("shade");}
 
+  const buttonRight = () => {
+    refButton1.current.classList.add("shade");}
+
+
+  //show buttons
   const removeShade = () => {
     if(refButton1.current.classList.contains("shade")) {
           refButton1.current.classList.remove("shade");
@@ -23,41 +27,43 @@ const Navbar = () => {
   }
 
     return (
-      <nav className="navbar row">
-        <ul className="box-navbar col-6">
-          <li className="list-box">
-            <Link to="/" className="link-list col-2">liens-1</Link>
+      //changer col si switch
+      <nav className="navbar row col-12">
+        <ul className="box-navbar col-8">
+          <li className="list-box col-3">
+            <Link to="/" className="link-list">liens-1</Link>
           </li>
-          <li className="list-box">
-            <Link to="/" className="link-list col-2">liens-2</Link>
+          <li className="list-box col-3">
+            <Link to="/" className="link-list">liens-2</Link>
           </li>
-          <li className="list-box">
-            <Link to="/" className="link-list col-2">liens-3</Link>
+          <li className="list-box col-3">
+            <Link to="/" className="link-list">liens-3</Link>
           </li>
         </ul>
-        <ul className="box-navbar col-6">
-            <li className="list-box offset-7">
+        <ul className="box-navbar col-4">
+            <Deconnexion/>
+            <li className="list-box col-3">
               <Link
                 to="/connexion"
                 onMouseOver={buttonLeft}
                 onMouseOut={removeShade}
                 ref={refButton1}
-                className="link-list col-3">
+                className="link-list">
                 Connexion
               </Link>
             </li>
-            <li className="list-box">
+            <li className="list-box col-3">
               <Link
-                to="inscription"
+                to="/inscription"
                 onMouseOver={buttonRight}
                 onMouseOut={removeShade}
                 ref={refButton2}
-                className="link-list col-3 ml-2">
+                className="link-list">
                 Inscription
               </Link>
             </li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
     )
   }
 

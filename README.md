@@ -1,6 +1,6 @@
 
 ### Notes :
-checker les points avec ctrl+f =1...=9 etc
+checker les points avec ctrl+f =1...=9 etc (remplace les issues)
 
   > 15/11/2020 padding changer pour form.inscription, p-sm-$ écraser via le poids de selecteur;  
   controller contrôler pour le form.inscription (plus d'erreur de state).
@@ -9,9 +9,15 @@ checker les points avec ctrl+f =1...=9 etc
   sass text center pour xs
 
   > 17/11/2020 espace connexion, refactoring inscription
-  session fonctionnelle, soucie de dépendance dans le hook(=2)
+  session fonctionnelle
 
-*note* : a faire le deconnexion.. étendre les sessions sur les autres composants..
+  > 18 ...22/11/2020 algo bon, voir plus niveau backend pour résoudre ce problème(=2)
+  problèmes des dépendances des hooks effect résolues.
+  logique de déconnection refaite
+
+  > 26/11/2020 remise en question de l'architecture du projet, backend instable
+
+*note* : étendre les sessions sur les autres composants..
 #### Liens sympa
 -
 + [CanIUse](https://caniuse.com/)  

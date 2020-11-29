@@ -2,9 +2,14 @@
   margin:0;
   background-attachment:fixed;
 }
-.wrap.inscription {
+.wrap.inscription,.wrap-home {
   //clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   background-position:center;
   background-repeat:no-repeat;
-  background-size: cover;
+  display:inline-block;
+}
+.wrap_home {
+  background-attachment: initial;
+  background-size:cover!important;
+  height:100vh;
 }

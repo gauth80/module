@@ -1,6 +1,7 @@
 import React, {useState,useEffect,useContext} from 'react';
 import {FirebaseContext} from '../Firebase';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import wrap from '../../media/img/wrapInscription.jpg';
 import coffe from '../../media/img/coffeW.png';
@@ -18,6 +19,7 @@ const Connexion = (props) => {
   const [error,setError] = useState('');
 
 
+
   useEffect(()=> {
       password.length >= 8 && email !== '' ? setBtn(true) : setBtn(false)
   }, [password,email,btn]);
@@ -27,7 +29,6 @@ const Connexion = (props) => {
     //annule refresh attr btn
     e.preventDefault();
     ctx.connexion(email,password).then(user => {
-
       props.history.push("/accueil");
 
     }).catch(error => {
@@ -84,6 +85,10 @@ const Connexion = (props) => {
         </div>
       </section>
   )
+}
+
+Connexion.propTypes = {
+  connexion : PropTypes.func.isRequired
 }
 
 export default Connexion;

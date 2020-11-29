@@ -99,17 +99,20 @@
 .navbar {
   background-color:#141414;
   .box-navbar {
-    margin:0;
-    padding:10px;
+    position:relative;
     .list-box {
-      display:inline-block;
       list-style-type:none;
+      display:block;
+      width:max-content;
       .link-list {
         color:white;
-        text-decoration: none;
+        text-decoration:none;
         letter-spacing:2px;
       }
     }
+  }
+  &,.box-navbar{
+    padding:5px;
   }
 }
 

@@ -1,5 +1,7 @@
 import React, {useState,useEffect,useContext} from 'react';
 import {Link} from 'react-router-dom';
+
+//api & database
 import {FirebaseContext} from '../Firebase';
 
 import wrap from '../../media/img/wrapInscription.jpg';
@@ -26,10 +28,19 @@ const Inscription = (props) => {
     e.preventDefault();
 
     //conssume context, methode(state).res(key)
-    ctx.inscription(email,password).then(user => {
+    ctx.inscription(email,password)
 
+    .then(authUser => {
+      return ctx.user(authUser.user.uid).set({
+        //doc ref aux states saisie, uid est cotée backend
+        pseudo,
+        email
+      })
+    })
+
+    .then(() => {
+        props.history.push("/accueil");
       //redirect
-      props.history.push("/accueil");
     })
     .catch(error => {
       //init var
@@ -65,6 +76,7 @@ const Inscription = (props) => {
           onSubmit={handleSubmit}>
           <fieldset className="col-xs-12 col-sm-12 col-lg-8 row">
             <legend className="col-12">Se créer un compte</legend>
+
             <label htmlFor="pseudo" className="row my-3 col-12 col-md-10">
               <input type="text"
                 id="pseudo"
@@ -98,6 +110,7 @@ const Inscription = (props) => {
                 onChange={e => setConfPassword(e.target.value)}
                 value={confPassword}/>
             </label>
+
             <div className="row my-3 col-12 col-md-10">
               {
                 btn ?

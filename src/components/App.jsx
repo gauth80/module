@@ -3,13 +3,12 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //Components layouts
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
-import Home from './layouts/Home';
-//Components sas
-import Connexion from './sas/Connexion';
-import Inscription from './sas/Inscription';
 //Components pages
-import Main from './pages/Main';
-import NoFound from './error/NoFound';
+import Home from './pages/Home';
+import Connexion from './pages/Connexion';
+import Inscription from './pages/Inscription';
+import Page2 from './pages/Page2';
+import NoFound from './pages/NoFound';
 
 class App extends Component {
   render() {
@@ -18,9 +17,9 @@ class App extends Component {
         <Header />
           <Switch>
             <Route exact path ="/" component={Home}/>
-            <Route path ="/accueil" component={Main}/>
             <Route path ="/connexion" component={Connexion}/>
             <Route path ="/inscription" component={Inscription}/>
+            <Route path ="/page2" component={Page2}/>
             <Route component={NoFound}/>
           </Switch>
         <Footer />

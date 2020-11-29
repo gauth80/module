@@ -100,15 +100,17 @@ figure {
 .navbar {
   background-color: #141414; }
   .navbar .box-navbar {
-    margin: 0;
-    padding: 10px; }
+    position: relative; }
     .navbar .box-navbar .list-box {
-      display: inline-block;
-      list-style-type: none; }
+      list-style-type: none;
+      display: block;
+      width: max-content; }
       .navbar .box-navbar .list-box .link-list {
         color: white;
         text-decoration: none;
         letter-spacing: 2px; }
+  .navbar, .navbar .box-navbar {
+    padding: 5px; }
 
 .infoSub {
   border-top: 2px dotted gray;
