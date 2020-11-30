@@ -1,0 +1,28 @@
+//=X indépendants
+.infoSub {
+  border-top:2px dotted gray;
+  background:#111111d6;
+  h3 {
+    font-family:Times New Roman, arial;
+    font-weight:400;
+    font-size:1.5rem;
+    color:white;
+  }
+  p {
+    font-family: Tahoma,arial;
+    color:#8f9090;
+    line-height:2rem;
+    text-indent:1rem;
+    letter-spacing:1px;
+    font-size:.9rem;
+  }
+  a {
+    text-decoration:none;
+    color:gray;
+    font-size:inherit;
+    transition:all 1s;
+    &:hover {
+      color:white;
+    }
+  }
+}

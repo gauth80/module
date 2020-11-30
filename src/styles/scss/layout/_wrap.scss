@@ -1,3 +1,4 @@
+
 .wrap {
   margin:0;
   background-attachment:fixed;
@@ -11,5 +12,5 @@
 .wrap_home {
   background-attachment: initial;
   background-size:cover!important;
-  height:100vh;
+  height:$hight;
 }

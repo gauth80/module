@@ -1,27 +1,14 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Judson&family=Permanent+Marker&family=Russo+One&display=swap');
-$ygreen: yellowgreen;
+// mesure (hors grid)
+$hight: 100vh;
 
-$marker: 'Permanent Marker', cursive;
-$judson: 'Judson', serif;
-$russo: 'Russo One', sans-serif;
-
+// all & reset
 * {
   box-sizing:border-box;
 }
-
 html,body {
   margin:0;
 }
 figure {
   padding:0;
-}
-
-//prefixer
-
-@mixin prefix($props, $value, $prefixes: (webkit moz o ms) ) {
-  @each $prefixe in $prefixes {
-    #{'-'+$prefixe+'-'+$props}:$value;
-  }
-  #{$props}:$value;
 }

@@ -10,12 +10,13 @@ const useSlide = (slideImg,slideTxt,img) => {
 
   const beginSlide = () => {
     slideImg.current.style.background = `url(${img[0].src})`;
-    slideTxt.current.innerHtml = img[0].txt;
+    slideTxt.current.innerHTML = img[0].txt;
   }
 
   const handleSlide = slide => {
+    //props slide sert de key
     slideImg.current.style.background = `url(${img[slide - 1].src})`;
-    slideTxt.current.innerHtml = img[slide - 1].txt;
+    slideTxt.current.innerHTML = img[slide - 1].txt;
     animationSlide(slideImg);
   }
 
@@ -30,6 +31,7 @@ const useSlide = (slideImg,slideTxt,img) => {
   const rightDirection = () => {
     if(counter === 0) {
       handleSlide(img.length);
+
       counter = img.length;
     }
 
@@ -40,12 +42,13 @@ const useSlide = (slideImg,slideTxt,img) => {
   const leftDirection = () => {
     if(counter === img.length - 1) {
       beginSlide();
+      //counter devient -1 et non une décrémentation fonctionnelle
       counter = -1;
       animationSlide(slideImg);
     }
 
     slideImg.current.style.background = `url(${img[counter + 1].src})`;
-    slideTxt.current.innerHtml = img[counter + 1].txt;
+    slideTxt.current.innerHTML = img[counter + 1].txt;
     counter++;
     animationSlide(slideImg);
   }

@@ -1,12 +1,11 @@
 import React from 'react';
-//modules tiers
-import Swup from 'swup';
+
 // Composant du diapo (abstract)
 import Slide from '../diapo/Slide';
 // Le Dom virtuel impose de conaître d'avance ces composants & elements.
 import mern from '../../media/img/mern.jpg';
-import image2 from '../../media/img/wallpaper.jpg';
-import image3 from '../../media/img/wrapInscription.jpg';
+import nodejs from '../../media/img/wallpaper.jpg';
+import firefox from '../../media/img/wrapInscription.jpg';
 
 
 const Images = [
@@ -16,19 +15,18 @@ const Images = [
       alt : "stack Mern"
     },
     {
-      src : image2,
-      txt : "un texte",
-      alt : "un texte alt"
+      src : nodejs,
+      txt : "envirronement de développement",
+      alt : "nodeJs"
     },
     {
-      src : image3,
-      txt : "un texte",
-      alt : "un texte alt"
+      src : firefox,
+      txt : "navigateur edition dev firefox",
+      alt : "firefox"
     },
 ];
 
 const Main = (props) => {
-  const swup = new Swup();
   return (
     <main id="swup" className="container transition-fade">
       <Slide img={Images}/>

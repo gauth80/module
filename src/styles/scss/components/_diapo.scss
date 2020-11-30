@@ -1,0 +1,22 @@
+.diapo {
+  padding-top:($hight / 2);
+  .diapo_left,.diapo_right, {
+    margin:0;
+    padding:0;
+  }
+  .diapo_right {
+    text-align:right;
+  }
+  .diapo_left {
+    text-align:left;
+  }
+  .diapo_center {
+    text-align:center;
+    padding:15px;
+    color:white;
+    background:#111111d6;
+    p {
+      margin:inherit;
+    }
+  }
+}

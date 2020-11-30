@@ -1,0 +1,20 @@
+.btn-success {
+  @extend %success;
+  @extend %button;
+}
+.btn-danger {
+  @extend %danger;
+  @extend %button;
+}
+.btn-mono {
+  @extend %monochrome;
+  @extend %button;
+}
+.btn-neon {
+  @extend %monochrome;
+  @extend %button;
+  border-color:$red;
+  &:hover:not(.shade) {
+    box-shadow:0 0 18px -5px $red;
+  }
+}

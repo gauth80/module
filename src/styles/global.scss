@@ -1,50 +1,23 @@
+//<!> si sass ne compile pas les fichiers, le code se lit séquentiellement
 @import '_config.scss';
-
 @import './scss/grid.scss';
-@import './scss/color.scss';
 
-@import './scss/components.scss';
-@import './scss/wrap.scss';
+@import './scss/base/_font.scss',
+        './scss/base/_color.scss';
 
+@import './scss/logic/_mixins.scss',
+        './scss/logic/_placeholders.scss';
 
+@import './scss/layout/_footer.scss',
+        './scss/layout/_form.scss',
+        './scss/layout/_navbar.scss',
+        './scss/layout/_wrap.scss';
 
-.shade {
-  transition:all .3s;
-  opacity:.4;
-}
+@import './scss/components/_buttons.scss',
+        './scss/components/_diapo.scss',
+        './scss/components/_sections.scss';
 
-.border {
-  border-radius:25px;
-  border:1px solid black;
-  margin:10px;
-  color:violet;
-}
-
-/////////////////////* animation *////////////////////
-.fadeIn {
-  //@include prefix(animation, fadeIn ease, moz o ms webkit);
-  transition:.4s;
-  opacity:.5;
-}
-
-.transition-fade {
-  transition: 0.4s;
-  opacity: 1;
-}
-
-html.is-animating .transition-fade {
-  opacity: 0;
-}
-
-
-%help {
-  //sert de point de repère lors de creation de component
-  padding:20px;
-  margin:10px;
-  border-radius:0 12.5px 0 12.5px;
-  width:200px;
-}
-
+//temporaires
 .helper {
   @extend %help;
   background-color:$darken;

@@ -5,8 +5,9 @@
 .wrap.inscription, .wrap-home {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  display: inline-block; }
 
-.wrap-home {
-  height: 100vh;
-  border-radius: 50px; }
+.wrap_home {
+  background-attachment: initial;
+  background-size: cover !important;
+  height: 100vh; }

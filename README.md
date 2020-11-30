@@ -19,10 +19,11 @@ checker les points avec ctrl+f =1...=9 etc (remplace les issues)
 
 *note* : étendre les sessions sur les autres composants..
 #### Liens sympa
--
+
 + [CanIUse](https://caniuse.com/)  
 + [CssTriggers](https://csstriggers.com/)  
--
++ [Patern Sass](https://sass-guidelin.es/fr/#architecture)
++ [BEM](http://getbem.com/)
 _________
 
 # Getting Started with Create React App
