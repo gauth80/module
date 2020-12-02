@@ -2,13 +2,13 @@
 //  =1 Navbar
 .navbar {
   background-color:#141414;
-  .box-navbar {
+  .box_navbar {
     position:relative;
-    .list-box {
+    .list_box {
       list-style-type:none;
       display:block;
       width:max-content;
-      .link-list {
+      .link_list {
         color:white;
         text-decoration:none;
         letter-spacing:2px;
@@ -19,7 +19,7 @@
       opacity:.4;
     }
   }
-  &,.box-navbar{
+  &,.box_navbar{
     padding:5px;
   }
 }

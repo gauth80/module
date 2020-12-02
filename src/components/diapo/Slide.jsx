@@ -5,27 +5,33 @@ import useSlide from '../../hooks/useSlide';
 const Slide = ({img}) => {
   const slideImg = useRef(null);
   const slideTxt = useRef(null);
-  const {rightDirection,leftDirection} = useSlide(slideImg,slideTxt,img);
+
+  const {rightDirection,leftDirection} = useSlide(
+    slideImg,
+    slideTxt,
+    img
+  );
 
   return (
-    <div ref={slideImg} className="wrap_home row">
-      <div className="col-12 diapo">
-        <div className="col-4 diapo_left">
-          <button onClick={rightDirection}>
-            Suivant
-          </button>
+    <div ref={slideImg} className="wrap-home col-12">
+      <div className="col-12 diapo_wrap-home">
+        <div className="col-4 diapo-left_diapo">
+          <div onClick={rightDirection} className="btn-arrow">
+            <span className="arrow_btn-arrow"></span>
+          </div>
         </div>
-        <div className="col-4 diapo_center">
+        <div className="col-4 diapo-center_diapo">
             <p ref={slideTxt}></p>
         </div>
-        <div className="col-4 diapo_right">
-          <button onClick={leftDirection}>
-            Prescédant
-          </button>
+        <div className="col-4 diapo-right_diapo">
+          <div onClick={leftDirection} className="btn-arrow">
+            <span className="arrow_btn-arrow__inverse"></span>
+          </div>
         </div>
       </div>
     </div>
   )
+
 }
 
 export default Slide;

@@ -3,11 +3,8 @@ import 'firebase/auth';
 import 'firebase/firestore';
 //import key from './key/config.json';
 
-//key de l'api :)
+//key de l'api (a bah non pas visible voyons)
 //const config = key;
-
-
-
 
 
 class Firebase {
@@ -29,7 +26,7 @@ class Firebase {
 
 
   user = uid =>
-    //this.db.doc(`user/${uid}`);
+    //this.db.doc(`user/${uid}`) legacy code...;
     this.db.collection("user").doc();
 
 }

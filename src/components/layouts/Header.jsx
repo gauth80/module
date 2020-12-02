@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 //Components
 import Navbar from './../navigation/Navbar';
-//import Switch from './../navigation/SwitchMode';
 
 
 class Header extends Component {

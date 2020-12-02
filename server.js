@@ -1,5 +1,6 @@
+//pas configurée (plus tard)
 
-//modules propres à nodeJs
+//modules tiers
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');

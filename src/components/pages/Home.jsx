@@ -7,7 +7,6 @@ import mern from '../../media/img/mern.jpg';
 import nodejs from '../../media/img/wallpaper.jpg';
 import firefox from '../../media/img/wrapInscription.jpg';
 
-
 const Images = [
     {
       src : mern,
@@ -28,7 +27,7 @@ const Images = [
 
 const Main = (props) => {
   return (
-    <main id="swup" className="container transition-fade">
+    <main className="container home">
       <Slide img={Images}/>
     </main>
   )

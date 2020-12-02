@@ -29,36 +29,36 @@ const Navbar = props => {
     return (
       //changer col si switch
       <nav className="navbar row col-12">
-        <ul className="box-navbar col-8">
-          <li className="list-box col-3">
-            <Link to="/" className="link-list">liens-1</Link>
+        <ul className="box_navbar col-8">
+          <li className="list_box col-3">
+            <Link to="/" className="link_list">liens-1</Link>
           </li>
-          <li className="list-box col-3">
-            <Link to="/" className="link-list">liens-2</Link>
+          <li className="list_box col-3">
+            <Link to="/" className="link_list">liens-2</Link>
           </li>
-          <li className="list-box col-3">
-            <Link to="/" className="link-list">liens-3</Link>
+          <li className="list_box col-3">
+            <Link to="/" className="link_list">liens-3</Link>
           </li>
         </ul>
-        <ul className="box-navbar col-4">
+        <ul className="box_navbar col-4">
             <Deconnexion/>
-            <li className="list-box col-3">
+            <li className="list_box col-3">
               <Link
                 to="/connexion"
                 onMouseOver={buttonLeft}
                 onMouseOut={removeShade}
                 ref={refButton1}
-                className="link-list">
+                className="link_list">
                 Connexion
               </Link>
             </li>
-            <li className="list-box col-3">
+            <li className="list_box col-3">
               <Link
                 to="/inscription"
                 onMouseOver={buttonRight}
                 onMouseOut={removeShade}
                 ref={refButton2}
-                className="link-list">
+                className="link_list">
                 Inscription
               </Link>
             </li>

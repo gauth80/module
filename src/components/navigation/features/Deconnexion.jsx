@@ -34,12 +34,12 @@ const Deconnexion = (props) => {
 
   //render
   return (
-    <li className="list-box col-3">
+    <li className="list_box col-3">
      <Link
        to="/"
        value={session}
        onClick={e => setSession(true)}
-       className="link-list">
+       className="link_list">
        Deconnexion
      </Link>
    </li>

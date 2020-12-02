@@ -17,9 +17,21 @@
         './scss/components/_diapo.scss',
         './scss/components/_sections.scss';
 
+@import './scss/pages/_home.scss';
+
 //temporaires
 .helper {
   @extend %help;
   background-color:$darken;
   color:invert($darken);
+}
+
+.fadeIn {
+
+}
+.switch__animate {
+  position: relative;
+}
+.switch__animate > html {
+  position:relative;
 }

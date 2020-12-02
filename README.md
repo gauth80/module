@@ -24,6 +24,33 @@ checker les points avec ctrl+f =1...=9 etc (remplace les issues)
 + [CssTriggers](https://csstriggers.com/)  
 + [Patern Sass](https://sass-guidelin.es/fr/#architecture)
 + [BEM](http://getbem.com/)
+
+Rappel CSS :   
+(**S'appuis sur la logique du BEM**)
+
+Block_Parent (ex: box_navbar || list_box)  
+  > box appartient à navbar.  
+  > list appartient à box.  
+
+A moins de faire :  
+
+```css
+
+  .Block:hover a {
+    color: $newColorLink;
+  }
+
+```
+Donc un even sur le Parent (block) et non l'enfant (a).  
+Il y as pas 36 façon d'écrire un mod sur les selecteurs.  
+
+Block_Parent__mod (ex: arrow_btn-arrow__inverse)    
+  > alteration d'un selecteur.  
+
+(moyen de s'orientée)
+
+Si besoin, voir scss/layout/_navbar.scss
+
 _________
 
 # Getting Started with Create React App
